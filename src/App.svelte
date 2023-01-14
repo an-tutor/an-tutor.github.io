@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { data } from './data'
 	import About from './components/About/About.svelte'
+    import TypesOfClasses from './components/TypesOfClasses/TypesOfClasses.svelte';
 </script>
 
 <About {...data.about} />
+
+<TypesOfClasses />
 
 <style>
 	:global(body) {
