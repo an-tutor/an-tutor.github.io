@@ -5,10 +5,11 @@
     export let withEnterIcon: boolean = false;
     export let fullWidth: boolean = false;
     export let text: string;
+    export let style: string = null;
 </script>
 
 {#if typeof onClick === "string"}
-    <a href={onClick} {target} class="btn" class:fullWidth>
+    <a href={onClick} {target} class="btn" class:fullWidth {style}>
         {#if withEnterIcon}
             <Icon icon="iconoir:long-arrow-down-right" width="25" height="25" />
         {/if}
@@ -18,7 +19,7 @@
         {/if}
     </a>
 {:else}
-    <button on:click={onClick} class="btn" class:fullWidth>
+    <button on:click={onClick} class="btn" class:fullWidth {style}>
         {#if withEnterIcon}
             <Icon icon="iconoir:long-arrow-down-right" width="25" height="25" />
         {/if}
@@ -30,19 +31,21 @@
 {/if}
 
 <style>
-    a.btn, a.btn:hover {
+    a.btn,
+    a.btn:hover {
         text-decoration: none;
     }
-    button.btn, button.btn:hover {
+    button.btn,
+    button.btn:hover {
         border: none;
     }
 
     .btn {
         cursor: pointer;
         padding: 12px;
-        background: #E2D4CE;
+        background: #e2d4ce;
         color: #573222;
-        transition: all .3s;
+        transition: all 0.3s;
         text-transform: uppercase;
         font-weight: 600;
         display: inline-flex;
@@ -54,7 +57,7 @@
         box-sizing: border-box;
     }
     .btn:hover {
-        background: #E4D7D2;
+        background: #e4d7d2;
     }
     .btn.fullWidth {
         width: 100%;

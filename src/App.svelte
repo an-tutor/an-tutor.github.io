@@ -6,7 +6,7 @@
 
 <About {...data.about} />
 
-<TypesOfClasses />
+<TypesOfClasses classes={data.classes} />
 
 <style>
 	:global(body) {
