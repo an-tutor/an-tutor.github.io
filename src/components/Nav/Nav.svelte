@@ -1,9 +1,17 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
+    import clickOutside from "svelte-outside-click";
     import type { TClasses } from "../../data";
     export let classes: TClasses;
 
     let shown: boolean = false;
+    const showMenuHandle = (e) => {
+        e.stopPropagation();
+        shown = true;
+    };
+    const clickOutsideHandle = () => {
+        if (shown === true) shown = false;
+    };
 </script>
 
 <div class="wrapper">
@@ -13,7 +21,7 @@
         </div>
         <span class="subtitle">Обо мне</span>
     </a>
-    <button class="btn" on:click={() => (shown = !shown)}>
+    <button class="btn" on:click={showMenuHandle}>
         <div class="icon-wrapper">
             <Icon icon="ion:menu" width="24" height="24" />
         </div>
@@ -26,7 +34,7 @@
         <span class="subtitle">Контакты</span>
     </a>
 </div>
-<div class="menu-popup" class:shown>
+<div class="menu-popup" class:shown use:clickOutside={clickOutsideHandle}>
     {#each classes as { title, href }}
         <a href={`#${href}`} on:click={() => (shown = false)}>{title}</a>
     {/each}

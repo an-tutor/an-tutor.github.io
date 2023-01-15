@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "sirv-cli": "^2.0.0",
-    "svelte-collapsible": "^0.2.1"
+    "svelte-collapsible": "^0.2.1",
+    "svelte-outside-click": "^1.1.1"
   }
 }
