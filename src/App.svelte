@@ -50,6 +50,24 @@
 			color: #07203b;
 		}
 	}
+	@keyframes -global-color-change-gold {
+		0%,
+		100% {
+			color: #fdeedc;
+		}
+		15%,
+		85% {
+			color: #ffd8a9;
+		}
+		30%,
+		70% {
+			color: #f1a661;
+		}
+		45%,
+		55% {
+			color: #e38b29;
+		}
+	}
 	@keyframes -global-border-color-change {
 		0%,
 		100% {
@@ -69,6 +87,24 @@
 		}
 		50% {
 			border-color: #07203b;
+		}
+	}
+	@keyframes -global-border-color-change-gold {
+		0%,
+		100% {
+			border-color: #fdeedc;
+		}
+		15%,
+		85% {
+			border-color: #ffd8a9;
+		}
+		30%,
+		70% {
+			border-color: #f1a661;
+		}
+		45%,
+		55% {
+			border-color: #e38b29;
 		}
 	}
 	@keyframes -global-bg-color-change {

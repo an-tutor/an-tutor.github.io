@@ -77,6 +77,9 @@
         position: relative;
         animation: border-color-change 3s infinite;
     }
+    .card:target {
+        animation: border-color-change-gold 3s infinite;
+    }
     h3 {
         text-align: center;
         margin-top: 0;
@@ -122,5 +125,8 @@
         top: -10px;
         left: 18px;
         animation: color-change 3s infinite;
+    }
+    .card:target .star-wrapper {
+        animation: color-change-gold 3s infinite;
     }
 </style>
