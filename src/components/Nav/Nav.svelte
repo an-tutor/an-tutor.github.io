@@ -90,6 +90,12 @@
         overflow: hidden;
         transition: all 0.3s ease-in-out;
     }
+
+    .menu-popup a, .menu-popup a:hover {
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+    }
     .shown {
         opacity: 1;
         max-height: 1000px;
