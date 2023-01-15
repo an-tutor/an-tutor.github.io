@@ -33,11 +33,6 @@
     .icon-wrapper {
         height: 20px;
         aspect-ratio: 1 / 1;
-        transform: rotate(0deg);
-        transition: transform 1s;
-    }
-    .icon-wrapper:hover {
-        transform: rotate(360deg);
     }
     .list li:nth-child(n) .icon-wrapper {
         color: #2ac28f;

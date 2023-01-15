@@ -33,11 +33,6 @@
     }
 
     .star-wrapper {
-        transform: rotate(0deg);
-        transition: all 0.3s;
         animation: color-change 3s infinite;
-    }
-    .star-wrapper:hover {
-        transform: rotate(70deg);
     }
 </style>

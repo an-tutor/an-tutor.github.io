@@ -72,7 +72,7 @@
     .menu-popup {
         position: fixed;
         bottom: 55px;
-        left: calc(50% + 11px);
+        left: 50%;
         transform: translateX(-50%);
         border-radius: 5px;
         display: flex;
@@ -86,12 +86,14 @@
         animation: border-color-change 3s infinite;
         z-index: 100;
         max-height: 0;
+        max-width: 80vw;
         opacity: 0;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
     }
 
-    .menu-popup a, .menu-popup a:hover {
+    .menu-popup a,
+    .menu-popup a:hover {
         text-decoration: none;
         color: #000;
         text-align: center;

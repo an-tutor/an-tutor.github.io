@@ -60,9 +60,6 @@
         border-radius: 6px;
         box-sizing: border-box;
     }
-    .btn:hover {
-        background: #006851;
-    }
     .btn.fullWidth {
         width: 100%;
         text-align: center;
