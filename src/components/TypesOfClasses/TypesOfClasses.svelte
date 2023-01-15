@@ -22,57 +22,76 @@
 </script>
 
 {#each classes as { title, btn, points }, i}
-    <h3>{title}</h3>
-    <Accordion bind:key>
-        {#each points as point}
-            <AccordionItem key={point.id} class="wrapper">
-                <button slot="header" class="header">
-                    <div class="iconsWrapper">
-                        <div
-                            class="iconWrapper"
-                            class:transparent={key === point.id}
-                        >
-                            <Icon icon="iconoir:plus" width={24} height={24} />
+    <div class="card">
+        <h3>{title}</h3>
+        <Accordion bind:key>
+            {#each points as point}
+                <AccordionItem key={point.id} class="wrapper">
+                    <button slot="header" class="header">
+                        <div class="iconsWrapper">
+                            <div
+                                class="iconWrapper"
+                                class:transparent={key === point.id}
+                            >
+                                <Icon
+                                    icon="iconoir:plus"
+                                    width={24}
+                                    height={24}
+                                />
+                            </div>
+                            <div
+                                class="iconWrapper"
+                                class:transparent={key !== point.id}
+                            >
+                                <Icon
+                                    icon="iconoir:minus"
+                                    width={24}
+                                    height={24}
+                                />
+                            </div>
                         </div>
-                        <div
-                            class="iconWrapper"
-                            class:transparent={key !== point.id}
-                        >
-                            <Icon icon="iconoir:minus" width={24} height={24} />
-                        </div>
+                        <span>
+                            {point.title}
+                        </span>
+                    </button>
+                    <div slot="body">
+                        {#each point.content as item}
+                            {#if typeof item === "string"}
+                                {@html item}
+                            {:else}
+                                <UnorderedList list={item} />
+                            {/if}
+                        {/each}
                     </div>
-                    <span>
-                        {point.title}
-                    </span>
-                </button>
-                <div slot="body">
-                    {#each point.content as item}
-                        {#if typeof item === "string"}
-                            {@html item}
-                        {:else}
-                            <UnorderedList list={item} />
-                        {/if}
-                    {/each}
-                </div>
-            </AccordionItem>
-        {/each}
-    </Accordion>
-    <Button
-        onClick={btn.href}
-        target="_blank"
-        text={btn.text}
-        withEnterIcon
-        fullWidth
-        style="margin-bottom: 15px; margin-top: -5px"
-    />
-    {#if i !== classes.length - 1}
-        <StarLine />
-    {/if}
+                </AccordionItem>
+            {/each}
+        </Accordion>
+        <Button
+            onClick={btn.href}
+            target="_blank"
+            text={btn.text}
+            withEnterIcon
+            fullWidth
+        />
+        <div class="star-wrapper">
+            <Icon icon="iconoir:star" width="20" height="20" />
+        </div>
+    </div>
 {/each}
 
 <style>
+    .card {
+        padding: 15px;
+        border: solid 1px #000;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        position: relative;
+        animation: border-color-change 3s infinite;
+    }
     h3 {
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 5px;
     }
     .header {
         color: #000;
@@ -102,5 +121,17 @@
     }
     .transparent {
         opacity: 0;
+    }
+    .star-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        width: 50px;
+        height: 20px;
+        top: -10px;
+        left: 18px;
+        animation: color-change 3s infinite;
     }
 </style>

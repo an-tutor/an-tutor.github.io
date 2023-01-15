@@ -11,21 +11,33 @@
 {#if typeof onClick === "string"}
     <a href={onClick} {target} class="btn" class:fullWidth {style}>
         {#if withEnterIcon}
-            <Icon icon="iconoir:long-arrow-down-right" width="25" height="25" />
+            <div class="icon-wrapper">
+                <Icon
+                    icon="iconoir:long-arrow-down-right"
+                    width="25"
+                    height="25"
+                />
+            </div>
         {/if}
         {text}
         {#if fullWidth}
-            <span style="width: 20px" />
+            <div class="icon-wrapper" />
         {/if}
     </a>
 {:else}
     <button on:click={onClick} class="btn" class:fullWidth {style}>
         {#if withEnterIcon}
-            <Icon icon="iconoir:long-arrow-down-right" width="25" height="25" />
+            <div class="icon-wrapper">
+                <Icon
+                    icon="iconoir:long-arrow-down-right"
+                    width="25"
+                    height="25"
+                />
+            </div>
         {/if}
         {text}
         {#if fullWidth}
-            <span style="width: 20px" />
+            <div class="icon-wrapper" />
         {/if}
     </button>
 {/if}
@@ -61,5 +73,10 @@
     }
     .btn.fullWidth {
         width: 100%;
+        text-align: center;
+    }
+    .icon-wrapper {
+        width: 25px;
+        min-width: 25px;
     }
 </style>

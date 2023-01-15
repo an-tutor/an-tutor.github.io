@@ -18,26 +18,26 @@
     .wrapper-lines::before,
     .wrapper-lines::after {
         position: relative;
-        content: '';
+        content: "";
         width: 72px;
         height: 1px;
         background-color: #07203b;
         top: 10px;
+        animation: bg-color-change 3s infinite;
     }
     .wrapper-lines::before {
-        margin-right: 20px;   
+        margin-right: 20px;
     }
     .wrapper-lines::after {
-        margin-left: 20px;   
+        margin-left: 20px;
     }
 
     .star-wrapper {
-        color: #07203b;
         transform: rotate(0deg);
-        transition: all .3s;
+        transition: all 0.3s;
+        animation: color-change 3s infinite;
     }
     .star-wrapper:hover {
-        color: #006851;
         transform: rotate(70deg);
     }
 </style>
