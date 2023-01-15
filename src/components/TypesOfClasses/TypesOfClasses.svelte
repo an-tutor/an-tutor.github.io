@@ -10,8 +10,8 @@
     let key: string;
 </script>
 
-{#each classes as { title, btn, points }, i}
-    <div class="card">
+{#each classes as { title, href, btn, points }, i}
+    <div class="card" id={href}>
         <h3>{title}</h3>
         <Accordion bind:key>
             {#each points as point}

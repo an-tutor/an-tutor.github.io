@@ -13,6 +13,7 @@ export const data = {
     classes: [
         {
             title: 'Индивидуальные занятия',
+            href: 'individual',
             btn: {
                 text: 'Записаться на урок',
                 href: 'https://t.me/a_miasina'
@@ -36,6 +37,7 @@ export const data = {
         },
         {
             title: 'Парные / групповые занятия',
+            href: 'group',
             btn: {
                 text: 'Подробнее о групповых занятиях',
                 href: 'https://t.me/a_miasina'
@@ -104,6 +106,7 @@ export type TAbout = {
 
 export type TClasses = {
     title: string;
+    href: string;
     btn: {
         text: string;
         href: string;

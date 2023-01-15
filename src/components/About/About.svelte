@@ -13,7 +13,7 @@
 {/if}
 
 {#if !!pros && pros.length > 0}
-    <h3>ОБО МНЕ:</h3>
+    <h3 id="about-me">ОБО МНЕ:</h3>
     <UnorderedList list={pros} />
 {/if}
 

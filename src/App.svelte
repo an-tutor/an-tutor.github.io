@@ -2,16 +2,23 @@
 	import { data } from "./data";
 	import About from "./components/About/About.svelte";
 	import TypesOfClasses from "./components/TypesOfClasses/TypesOfClasses.svelte";
-    import Footer from "./components/Footer/Footer.svelte";
+	import Footer from "./components/Footer/Footer.svelte";
+	import Nav from "./components/Nav/Nav.svelte";
 	const { about, classes, contacts } = data;
 </script>
 
 <About {...about} />
 <TypesOfClasses {classes} />
 <Footer {contacts} />
+<Nav {classes} />
 
 <style>
+	:global(html) {
+		scroll-padding-top: 20px;
+		scroll-behavior: smooth;
+	}
 	:global(body) {
+		/* scroll-padding-top: 20px; */
 		background-color: #fff;
 		color: #000;
 		max-width: 720px;
@@ -19,9 +26,9 @@
 		font-family: "Montserrat", sans-serif;
 	}
 	:global(h3) {
-        text-align: center;
-        margin-block: 20px;
-    }
+		text-align: center;
+		margin-block: 20px;
+	}
 	@keyframes -global-color-change {
 		0%,
 		100% {

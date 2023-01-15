@@ -4,19 +4,18 @@
     export let contacts: TContacts;
 </script>
 
-<h3>Контакты</h3>
+<h3 id="contacts">Контакты</h3>
 <div class="wrapper">
-    {#each contacts as {title, icon, link}}
+    {#each contacts as { title, icon, link }}
         <Button fullWidth {icon} onClick={link} text={title} />
     {/each}
 </div>
-
 
 <style>
     .wrapper {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 70px;
     }
 </style>
