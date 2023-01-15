@@ -21,7 +21,7 @@
         content: '';
         width: 72px;
         height: 1px;
-        background-color: #573222cc;
+        background-color: #07203b;
         top: 10px;
     }
     .wrapper-lines::before {
@@ -32,10 +32,12 @@
     }
 
     .star-wrapper {
+        color: #07203b;
         transform: rotate(0deg);
-        transition: transform .3s;
+        transition: all .3s;
     }
     .star-wrapper:hover {
+        color: #006851;
         transform: rotate(70deg);
     }
 </style>

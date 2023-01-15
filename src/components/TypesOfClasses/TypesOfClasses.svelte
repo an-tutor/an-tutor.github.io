@@ -50,7 +50,7 @@
                         {#if typeof item === "string"}
                             {@html item}
                         {:else}
-                            <UnorderedList list={item} theme="blue" />
+                            <UnorderedList list={item} />
                         {/if}
                     {/each}
                 </div>
@@ -75,7 +75,8 @@
         text-align: center;
     }
     .header {
-        color: #573222;
+        color: #000;
+        background: transparent;
         border: none;
         display: flex;
         align-items: center;

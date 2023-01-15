@@ -10,8 +10,8 @@
 
 <style>
 	:global(body) {
-		background-color: #f5f5f5;
-		color: #573222;
+		background-color: #fff;
+		color: #000;
 		max-width: 720px;
 		margin: 0 auto;
 		font-family: 'Montserrat', sans-serif;

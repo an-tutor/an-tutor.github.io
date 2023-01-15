@@ -43,8 +43,8 @@
     .btn {
         cursor: pointer;
         padding: 12px;
-        background: #e2d4ce;
-        color: #573222;
+        background: #2ac28f;
+        color: #fff;
         transition: all 0.3s;
         text-transform: uppercase;
         font-weight: 600;
@@ -57,7 +57,7 @@
         box-sizing: border-box;
     }
     .btn:hover {
-        background: #e4d7d2;
+        background: #006851;
     }
     .btn.fullWidth {
         width: 100%;
