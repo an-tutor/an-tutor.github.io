@@ -3,20 +3,9 @@
     import Icon from "@iconify/svelte";
     import Button from "../../ui/Button/Button.svelte";
     import UnorderedList from "../../ui/UnorderedList/UnorderedList.svelte";
-    import StarLine from "../../ui/StarLine/StarLine.svelte";
+    import type { TClasses } from "../../data";
 
-    export let classes: {
-        title: string;
-        btn: {
-            text: string;
-            href: string;
-        };
-        points: {
-            id: string;
-            title: string;
-            content: (string | string[])[];
-        }[];
-    }[];
+    export let classes: TClasses;
 
     let key: string;
 </script>
@@ -70,8 +59,8 @@
             onClick={btn.href}
             target="_blank"
             text={btn.text}
-            withEnterIcon
             fullWidth
+            icon="iconoir:planet"
         />
         <div class="star-wrapper">
             <Icon icon="iconoir:star" width="20" height="20" />

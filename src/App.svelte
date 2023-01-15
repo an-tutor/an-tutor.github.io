@@ -2,11 +2,13 @@
 	import { data } from "./data";
 	import About from "./components/About/About.svelte";
 	import TypesOfClasses from "./components/TypesOfClasses/TypesOfClasses.svelte";
+    import Footer from "./components/Footer/Footer.svelte";
+	const { about, classes, contacts } = data;
 </script>
 
-<About {...data.about} />
-
-<TypesOfClasses classes={data.classes} />
+<About {...about} />
+<TypesOfClasses {classes} />
+<Footer {contacts} />
 
 <style>
 	:global(body) {
@@ -16,6 +18,10 @@
 		margin: 0 auto;
 		font-family: "Montserrat", sans-serif;
 	}
+	:global(h3) {
+        text-align: center;
+        margin-block: 20px;
+    }
 	@keyframes -global-color-change {
 		0%,
 		100% {

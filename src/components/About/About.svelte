@@ -27,11 +27,3 @@
         wrapperTag="div"
     />
 {/if}
-
-<!-- <StarLine /> -->
-<style>
-    h3 {
-        text-align: center;
-        margin-block: 20px;
-    }
-</style>

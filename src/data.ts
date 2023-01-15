@@ -76,8 +76,24 @@ export const data = {
                 },
             ]
         }
+    ],
+    contacts: [
+        {
+            title: 'Телеграм',
+            icon: 'fa-brands:telegram-plane',
+            link: 'https://t.me/a_miasina',
+        },
+        {
+            title: 'Группа ВКонтакте',
+            icon: 'entypo-social:vk',
+            link: 'https://vk.com/anastasia_pro_geo',
+        },
+        {
+            title: 'Инстаграм',
+            icon: 'bxl:instagram',
+            link: 'https://instagram.com/an.tutor',
+        },
     ]
-
 }
 
 export type TAbout = {
@@ -97,6 +113,12 @@ export type TClasses = {
         title: string;
         content: (string | string[])[]
     }[];
+}[]
+
+export type TContacts = {
+    title: string;
+    icon: string;
+    link: string;
 }[]
 
 export type TData = {
