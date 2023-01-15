@@ -72,15 +72,15 @@
     .menu-popup {
         position: fixed;
         bottom: 55px;
-        left: calc(50% + 6px);
+        left: calc(50% + 11px);
         transform: translateX(-50%);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
-        padding: 5px;
+        gap: 10px;
+        padding: 10px;
         background-color: #fff;
         border: 1px solid;
         animation: border-color-change 3s infinite;
