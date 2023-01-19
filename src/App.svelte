@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { data } from "./data";
+	import data from "./data";
 	import About from "./components/About/About.svelte";
 	import TypesOfClasses from "./components/TypesOfClasses/TypesOfClasses.svelte";
 	import Footer from "./components/Footer/Footer.svelte";
