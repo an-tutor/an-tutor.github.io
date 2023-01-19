@@ -12,7 +12,7 @@ const data = {
     },
     sections: [
         {
-            title: 'Подготовка к ОГЭ',
+            title: 'Подготовка к&nbspОГЭ',
             alias: 'ogeprep',
         },
         {

@@ -1,14 +1,16 @@
 <script lang="ts">
 	import data from "./data";
+    import Avatar from "./components/Avatar/Avatar.svelte";
 	import About from "./components/About/About.svelte";
 	import TypesOfClasses from "./components/TypesOfClasses/TypesOfClasses.svelte";
 	import Footer from "./components/Footer/Footer.svelte";
 	import Nav from "./components/Nav/Nav.svelte";
-	const { about, classes, contacts } = data;
+	const { about, sections, classes, contacts } = data;
 </script>
 
+<Avatar />
 <About {...about} />
-<TypesOfClasses {classes} />
+<TypesOfClasses {classes} {sections} />
 <Footer {contacts} />
 <Nav {classes} />
 
@@ -18,12 +20,16 @@
 		scroll-behavior: smooth;
 	}
 	:global(body) {
-		/* scroll-padding-top: 20px; */
 		background-color: #fff;
 		color: #000;
+		font-family: "Montserrat", sans-serif;
+		padding: 0;
+	}
+	:global(.wrapper-mw) {
 		max-width: 720px;
 		margin: 0 auto;
 		font-family: "Montserrat", sans-serif;
+		padding: 8px;
 	}
 	:global(h3) {
 		text-align: center;
@@ -53,19 +59,19 @@
 	@keyframes -global-color-change-gold {
 		0%,
 		100% {
-			color: #fdeedc;
+			color: #ff5500;
 		}
-		15%,
-		85% {
-			color: #ffd8a9;
+		50% {
+			color: #ff9b29;
 		}
-		30%,
-		70% {
-			color: #f1a661;
+	}
+	@keyframes -global-color-change-blue {
+		0%,
+		100% {
+			color: #456ec7;
 		}
-		45%,
-		55% {
-			color: #e38b29;
+		50% {
+			color: #8499eb;
 		}
 	}
 	@keyframes -global-border-color-change {
@@ -92,19 +98,10 @@
 	@keyframes -global-border-color-change-gold {
 		0%,
 		100% {
-			border-color: #fdeedc;
+			border-color: #ff5500;
 		}
-		15%,
-		85% {
-			border-color: #ffd8a9;
-		}
-		30%,
-		70% {
-			border-color: #f1a661;
-		}
-		45%,
-		55% {
-			border-color: #e38b29;
+		50% {
+			border-color: #ff9b29;
 		}
 	}
 	@keyframes -global-bg-color-change {

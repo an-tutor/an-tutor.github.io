@@ -7,7 +7,7 @@ export type TAbout = {
 export type TSections = {
     title: string,
     alias: string,
-}
+}[]
 
 export type TClasses = {
     title: string;
@@ -32,6 +32,7 @@ export type TContacts = {
 
 export type TData = {
     about: TAbout;
+    sections: TSections;
     classes: TClasses;
     contacts: TContacts;
 }

@@ -5,7 +5,7 @@
 </script>
 
 <h3 id="contacts">Контакты</h3>
-<div class="wrapper">
+<div class="wrapper wrapper-mw">
     {#each contacts as { title, icon, link }}
         <Button fullWidth {icon} onClick={link} text={title} />
     {/each}
