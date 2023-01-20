@@ -18,7 +18,6 @@ export type TClasses = {
         href: string;
     };
     points: {
-        id: string;
         title: string;
         content: (string | string[])[]
     }[];

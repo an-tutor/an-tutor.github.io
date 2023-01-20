@@ -19,21 +19,24 @@
     let key: string;
 </script>
 
-{#each data as { alias_classes, title }}
+{#each data as bigdata}
     <h2>
         <Icon icon="iconoir:flash" />
         <span>
-            {@html title}
+            {@html bigdata.title}
         </span>
         <Icon icon="iconoir:flash" />
     </h2>
     <div class="wrapper-mw">
-        {#each alias_classes as { title, href, btn, points }}
-            <div class="card" id={href}>
-                <h3>{title}</h3>
+        {#each bigdata.alias_classes as smalldata}
+            <div class="card" id={smalldata.href}>
+                <h3>{smalldata.title}</h3>
                 <Accordion bind:key>
-                    {#each points as point}
-                        <AccordionItem key={point.id} class="wrapper">
+                    {#each smalldata.points as point}
+                        <AccordionItem
+                            key={bigdata.title+smalldata.title+point.title}
+                            class="wrapper"
+                        >
                             <button slot="header" class="header">
                                 <div class="iconsWrapper">
                                     <div
@@ -64,7 +67,7 @@
                             <div slot="body">
                                 {#each point.content as item}
                                     {#if typeof item === "string"}
-                                        {@html item}
+                                        <p>{@html item}</p>
                                     {:else}
                                         <UnorderedList list={item} />
                                     {/if}
@@ -74,9 +77,9 @@
                     {/each}
                 </Accordion>
                 <Button
-                    onClick={btn.href}
+                    onClick={smalldata.btn.href}
                     target="_blank"
-                    text={btn.text}
+                    text={smalldata.btn.text}
                     fullWidth
                     icon="iconoir:planet"
                 />

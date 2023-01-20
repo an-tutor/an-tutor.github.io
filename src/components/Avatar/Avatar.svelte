@@ -20,6 +20,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 20px;
     }
     img {
         width: 30vw;
