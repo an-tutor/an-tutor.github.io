@@ -93,7 +93,6 @@
 
 <style>
     h2 {
-        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
