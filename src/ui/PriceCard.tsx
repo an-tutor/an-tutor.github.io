@@ -44,10 +44,10 @@ function PriceCard(info: TPricing) {
         />
         <div className="card-actions justify-between items-center mt-auto">
           {info.priceFrom ? (
-            <p className="text-3xl font-bold">от {info.priceFrom}₽</p>
+            <p className="text-3xl font-mono">от {info.priceFrom}₽</p>
           ) : null}
           {info.price ? (
-            <p className="text-3xl font-bold">{info.price}</p>
+            <p className="text-3xl font-mono">{info.price}</p>
           ) : null}
           {info.more ? (
             <>

@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Golos UI: Copyright ? ParaType, 2018. All rights reserved.*/
+/* Font Golos Text: Copyright ? ParaType, 2018. All rights reserved.*/
+/* Font PT Mono: Copyright ? ParaType, 2018. All rights reserved.*/
+
+@font-face {
+	font-family: 'GolosUIWebVF';
+	src: 
+		url('./assets/fonts/Golos-UI/golos-ui_vf.woff2') format('woff2'),
+		url('./assets/fonts/Golos-UI/golos-ui_vf.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosTextWebVF';
+	src: 
+        url('./assets/fonts/Golos-Text/golos-text_vf.woff2') format('woff2'),
+        url('./assets/fonts/Golos-Text/golos-text_vf.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+            
+@font-face {
+	font-family: 'PTMonoWebBold';
+	src: 
+        url('./assets/fonts/PT-Mono/pt-mono_bold.woff2') format('woff2'),
+        url('./assets/fonts/PT-Mono/pt-mono_bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@layer base {
+    html {
+        font-family: "GolosUIWebVF", system-ui, sans-serif;
+    }
+    .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl, .card-title, .btn {
+        font-family: "GolosTextWebVF", system-ui, sans-serif;
+    }
+}
+
+@layer utilities {
+    .font-mono {
+        font-family: "PTMonoWebBold", ui-monospace, monospace;
+    }
+}
+
 .priceCardDescription ul {
     list-style: disc;
     margin-left: 20px;
