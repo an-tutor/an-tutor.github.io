@@ -1,17 +1,18 @@
+import ContactMe from "../ui/ContactMe";
+
 function Cta() {
   return (
-    <section className="py-20 my-10 w-full bg-red-700 relative z-10 overflow-hidden">
-      <div className="max-w-screen-xl mx-auto flex flex-col xl:flex-row justify-between align-middle">
+    <section className="py-20 mt-10 w-full bg-accent relative z-0 overflow-hidden">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5 px-4">
         <div>
-          <h3 className="text-3xl">Заинтересовало мое предложение?</h3>
-          <h3 className="text-4xl font-bold">Свяжитесь со мной!</h3>
+          <h3 className="text-3xl text-accent-content">
+            Заинтересовало мое предложение?
+          </h3>
+          <h3 className="text-4xl font-bold text-accent-content">
+            Свяжитесь со мной!
+          </h3>
         </div>
-        <div className="flex mt-4 gap-3 justify-between md:justify-center">
-          <button className="btn btn-circle btn-outline">X</button>
-          <button className="btn btn-circle btn-outline">X</button>
-          <button className="btn btn-circle btn-outline">X</button>
-          <button className="btn btn-circle btn-outline">X</button>
-        </div>
+        <ContactMe isPulse />
       </div>
       <div>
         <span className="absolute top-0 left-0 z-[-1]">
@@ -39,8 +40,8 @@ function Cta() {
                 y2="-106.425"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="white" stop-opacity="0.07" />
-                <stop offset="1" stop-color="white" stop-opacity="0" />
+                <stop stopColor="white" stopOpacity="0.07" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
@@ -69,8 +70,8 @@ function Cta() {
                 y2="88.5747"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="white" stop-opacity="0.07" />
-                <stop offset="1" stop-color="white" stop-opacity="0" />
+                <stop stopColor="white" stopOpacity="0.07" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

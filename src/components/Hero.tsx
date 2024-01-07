@@ -1,23 +1,32 @@
+import anastasia from "../assets/anastasia.jpg";
+import ContactMe from "../ui/ContactMe";
+
 function Hero() {
   return (
-    <div className="hero min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="max-w-s md:max-w-md">
-          <img
-            src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className="rounded-lg"
-          />
-          <div className="flex mt-4 gap-3 justify-between md:justify-center">
-            <button className="btn btn-circle btn-outline">X</button>
-            <button className="btn btn-circle btn-outline">X</button>
-            <button className="btn btn-circle btn-outline">X</button>
-            <button className="btn btn-circle btn-outline">X</button>
-          </div>
+    <div className="hero min-h-[90vh]">
+      <div className="hero-content flex-col lg:flex-row-reverse w-full md:px-0">
+        <div className="max-w-s md:max-w-md base-0 grow">
+          <img src={anastasia} className="rounded-lg mb-4" />
         </div>
-        <div>
-          <h1 className="text-5xl font-bold">Мясина Анастасия</h1>
-          <p className="py-5">Докажу, что география - это просто</p>
-          <button className="btn ">Get Started</button>
+        <div className="base-0 grow">
+          <h1 className="text-5xl pb-8 font-bold text-primary">
+            Мясина Анастасия
+          </h1>
+          <p className="text-xl pb-4">
+            Я репетитор по&nbsp;географии{" "}
+            <b>
+              с&nbsp;экологическими компетенциями, действующий учитель первой
+              квалификационной категории
+            </b>
+            . Помогаю ребятам <b>сдать ОГЭ на&nbsp;высокий балл</b>,
+            а&nbsp;также повысить успеваемость по предмету{" "}
+            <b>с&nbsp;интересом и без&nbsp;зубрежки</b>. Помогу&nbsp;увидеть
+            связь географии с&nbsp;другими науками.
+          </p>
+          <p className="text-2xl md:text-3xl pb-4">
+            Докажу, что география — это&nbsp;просто!
+          </p>
+          <ContactMe isPulse />
         </div>
       </div>
     </div>
