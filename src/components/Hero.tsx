@@ -10,7 +10,7 @@ function Hero() {
         </div>
         <div className="base-0 grow">
           <h1 className="text-5xl pb-8 font-bold text-primary">
-            Мясина Анастасия
+            Мясина Анастасия Александровна
           </h1>
           <p className="text-xl pb-4">
             Я репетитор по&nbsp;географии{" "}
