@@ -9,7 +9,7 @@ function Hero() {
           <img src={anastasia} className="rounded-lg mb-4" />
         </div>
         <div className="base-0 grow">
-          <h1 className="text-[2.75rem] leading-none font-[GolosTextWebVF] tracking-wide pb-4 font-bold text-primary">
+          <h1 className="text-3xl sm:text-[2.75rem] leading-tight sm:leading-none font-[GolosTextWebVF] tracking-wide pb-4 font-bold text-primary">
             Мясина Анастасия Александровна
           </h1>
           <p className="text-xl pb-4 leading-normal">
@@ -23,7 +23,7 @@ function Hero() {
             <b>с&nbsp;интересом и без&nbsp;зубрежки</b>. Помогу&nbsp;увидеть
             связь географии с&nbsp;другими науками.
           </p>
-          <p className="text-2xl md:text-3xl pb-6">
+          <p className="leading-normal sm:leading-none text-2xl md:text-3xl pb-6">
             Докажу, что география — это&nbsp;просто!
           </p>
           <ContactMe isPulse />
