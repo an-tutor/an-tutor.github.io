@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { RiInstagramFill } from "react-icons/ri";
+// import { RiInstagramFill } from "react-icons/ri";
 
 type TContactMe = {
   isPulse?: boolean;
@@ -37,13 +37,13 @@ function ContactMe({ isPulse, wrapperClassName }: TContactMe) {
       >
         <IoLogoWhatsapp size={30} />
       </a>
-      <a
+      {/* <a
         className="btn btn-circle"
         href="https://www.instagram.com/an.tutor"
         target="_blank"
       >
         <RiInstagramFill size={30} />
-      </a>
+      </a> */}
       <a
         className="btn btn-circle p-1"
         href="https://profi.ru/profile/MyasinaAA2"

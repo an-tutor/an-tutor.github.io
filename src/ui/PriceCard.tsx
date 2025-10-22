@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 import { IoClose } from "react-icons/io5";
 import cn from "classnames";
 import ContactMe from "./ContactMe";
@@ -17,6 +18,35 @@ export type TPricing = {
 };
 
 function PriceCard(info: TPricing) {
+  const handleShowMore = () => {
+    const dialog = document.getElementById(info.id.toString()) as
+      | undefined
+      | HTMLDialogElement;
+    if (dialog) dialog.showModal();
+  };
+
+  const handleClose = (event: MouseEvent<HTMLDialogElement>) => {
+    const dialog = document.getElementById(info.id.toString()) as
+      | undefined
+      | HTMLDialogElement;
+
+    if (dialog) {
+      const rect = (
+        document.getElementById(`${info.id.toString()}-inner`) as HTMLDivElement
+      ).getBoundingClientRect();
+
+      const isInDialog =
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width;
+
+      if (!isInDialog) {
+        dialog.close();
+      }
+    }
+  };
+
   return (
     <div
       className={cn("card", {
@@ -51,22 +81,18 @@ function PriceCard(info: TPricing) {
           ) : null}
           {info.more ? (
             <>
-              <button
-                className="btn btn-warning"
-                onClick={() => {
-                  const dialog = document.getElementById(info.id.toString()) as
-                    | undefined
-                    | HTMLDialogElement;
-                  if (dialog) dialog.showModal();
-                }}
-              >
+              <button className="btn btn-warning" onClick={handleShowMore}>
                 Узнать больше
               </button>
               <dialog
                 id={info.id.toString()}
                 className="modal modal-bottom sm:modal-middle"
+                onClick={handleClose}
               >
-                <div className="modal-box bg-neutral text-neutral-content">
+                <div
+                  className="modal-box bg-neutral text-neutral-content"
+                  id={`${info.id.toString()}-inner`}
+                >
                   <div
                     className="priceCardDescription"
                     dangerouslySetInnerHTML={{ __html: info.more }}
